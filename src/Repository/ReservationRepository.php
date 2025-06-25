@@ -47,7 +47,7 @@ class ReservationRepository extends ServiceEntityRepository
             ->leftJoin('reservation.user', 'user');
     }
 
-    /**
+     /**
      * Query all records by User.
      *
      * @param UserInterface $user User
@@ -64,8 +64,9 @@ class ReservationRepository extends ServiceEntityRepository
             )
             ->leftJoin('reservation.item', 'item')
             ->leftJoin('reservation.user', 'user')
-            ->andWhere('reservation.user = :user')
-            ->setParameter('user', $user);
+            ->andWhere('reservation.user = :user OR reservation.email = :email')
+            ->setParameter('user', $user)
+            ->setParameter('email',$user->getEmail());
     }
 
     /**
