@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.tag_details'|trans({'%id%': tag.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="display-6 text-primary text-center mb-5">{{ 'title.tag_details'|trans({'%id%': tag.id|default('')}) }}</h1>
+
+        {% if tag is defined and tag|length %}
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">{{ 'label.id'|trans }}</dt>
+                        <dd class="col-sm-8">{{ tag.id }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.created_at'|trans }}</dt>
+                        <dd class="col-sm-8">{{ tag.createdAt|date('Y/m/d') }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.updated_at'|trans }}</dt>
+                        <dd class="col-sm-8">{{ tag.updatedAt|date('Y/m/d') }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.title'|trans }}</dt>
+                        <dd class="col-sm-8">{{ tag.title }}</dd>
+                    </dl>
+                </div>
+                <div class="card-footer bg-light text-end">
+                    <a href="{{ url('tag_index') }}" class="btn btn-outline-secondary" title="{{ 'action.back_to_list'|trans }}">
+                        {{ 'action.back_to_list'|trans }}
+                    </a>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ 'message.record_not_found'|trans }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

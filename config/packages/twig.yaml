@@ -1,0 +1,10 @@
+twig:
+    file_name_pattern: '*.twig'
+    form_themes: ['bootstrap_5_horizontal_layout.html.twig']
+    globals:
+        item_images_directory: 'uploads/items/'
+    paths:
+        '%kernel.project_dir%/templates/404': 404
+when@test:
+    twig:
+        strict_variables: true

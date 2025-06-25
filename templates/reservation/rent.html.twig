@@ -1,0 +1,6 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'title.rent_item'|trans({'%id%': item.id|default('')}),
+    form: form,
+    submit_label: 'action.rent'|trans,
+    back_to_list_path: 'reservation_my',
+} %}

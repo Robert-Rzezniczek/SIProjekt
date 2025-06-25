@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.item_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.item_list'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="add-new mb-3">
+                <a href="{{ url('item_create') }}" class="btn btn-primary" title="{{ 'action.add'|trans }}">
+                    {{ 'action.add'|trans }}
+                </a>
+            </div>
+        {% endif %}
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'item.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.created_at'|trans, 'item.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.updated_at'|trans, 'item.updatedAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.title'|trans, 'item.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.rating'|trans, 'item.rating') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.quantity'|trans, 'item.quantity') }}</th>
+                <th>{{ 'label.category'|trans }}</th>
+                <th>{{ 'label.tags'|trans }}</th>
+                <th>{{ 'label.actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in pagination.items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.createdAt|format_date('long') }}</td>
+                    <td>{{ item.updatedAt|format_date('long') }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>
+                        {% if item.rating is null %}
+                            <span class="text-muted">{{ 'label.no_rating'|trans }}</span>
+                        {% else %}
+                            <div class="progress" style="height: 20px;">
+                                {% set progress = item.rating|number_format(0) * 20 %} {# Przeliczenie 0-5 na 0-100% #}
+                                {% set bgColor = item.rating >= 4 ? 'bg-success' : (item.rating >= 3 ? 'bg-warning' : 'bg-danger') %}
+                                <div class="progress-bar {{ bgColor }}" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ item.rating }}" aria-valuemin="0" aria-valuemax="5">
+                                    {{ item.rating }}/5
+                                </div>
+                            </div>
+                        {% endif %}
+                    </td>
+                    <td>{{ item.quantity }}</td>
+                    <td>
+                        <a class="btn btn-outline-primary me-2"
+                           href="{{ url('item_index', {'categoryId': item.category.id}) }}"
+                           title="{{ item.category.title }}">
+                            {{ item.category.title }}
+                        </a>
+                    </td>
+                    <td>
+                        {% if item.tags is defined and item.tags|length %}
+                            {% for tag in item.tags %}
+                                <a class="btn btn-outline-primary me-2"
+                                   href="{{ url('item_index', {'tagId': tag.id}) }}"
+                                   title="{{ tag.title }}">
+                                    {{ tag.title }}
+                                </a>
+                            {% endfor %}
+                        {% else %}
+                             
+                        {% endif %}
+                    </td>
+                    <td>
+                        <div class="btn-group" role="group">
+                        <a class="btn btn-outline-primary me-2" href="{{ url('item_view', {id: item.id}) }}" title="{{ 'action.view'|trans }}">
+                            {{ 'action.view'|trans }}
+                        </a>
+                        {% if is_granted('ITEM_EDIT', item) %}
+                            <a class="btn btn-outline-secondary me-2" href="{{ url('item_edit', {id: item.id}) }}" title="{{ 'action.edit'|trans }}">
+                                {{ 'action.edit'|trans }}
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ITEM_DELETE', item) %}
+                            <a class="btn btn-outline-danger" href="{{ url('item_delete', {id: item.id}) }}" title="{{ 'action.delete'|trans }}">
+                                {{ 'action.delete'|trans }}
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ITEM_RENT', item) and not is_granted('ROLE_ADMIN') %}
+                            <a class="btn btn-outline-success me-2" href="{{ url('reservation_rent', {id: item.id}) }}" title="{{ 'action.rent'|trans }}">
+                                {{ 'action.rent'|trans }}
+                            </a>
+                        {% endif %}
+                        {% if is_granted('ITEM_RESERVE', item) %}
+                            <a class="btn btn-outline-primary" href="{{ url('reservation_reserve', {id: item.id}) }}" title="{{ 'action.reserve'|trans }}">
+                                {{ 'action.reserve'|trans }}
+                            </a>
+                        {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

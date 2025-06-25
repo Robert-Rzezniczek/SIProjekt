@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if is_granted('ROLE_ADMIN') %}
+        {{ 'label.admin_panel'|trans }}
+    {% else %}
+        {{ 'label.user_panel'|trans }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <h1 class="display-6 text-primary text-center mb-5">
+                    {% if is_granted('ROLE_ADMIN') %}
+                        {{ 'label.admin_panel'|trans }}
+                    {% else %}
+                        {{ 'label.user_panel'|trans }}
+                    {% endif %}
+                </h1>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <h5 class="card-title text-dark">
+                            {% if is_granted('ROLE_ADMIN') %}
+                                {{ 'label.welcome_admin'|trans }}
+                            {% else %}
+                                {{ 'label.welcome_user'|trans }}
+                            {% endif %}
+                        </h5>
+                        <p class="card-text text-muted">
+                            {{ 'message.logged_in_as'|trans }}: {{ app.user.email }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title text-dark">{{ 'label.profile_actions'|trans }}</h5>
+                        <div class="list-group list-group-flush">
+                            <a href="{{ path('profile_edit') }}" class="list-group-item list-group-item-action btn btn-primary text-decoration-none">
+                                <i class="bi bi-person-fill"></i> {{ 'label.edit_profile'|trans }}
+                            </a>
+                            <a href="{{ path('profile_change_password') }}" class="list-group-item list-group-item-action btn btn-secondary text-decoration-none">
+                                <i class="bi bi-lock-fill"></i> {{ 'label.change_password'|trans }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.user_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.user_list'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'user.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.email'|trans, 'user.email') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.roles'|trans, 'user.roles') }}</th>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <th>{{ 'label.actions'|trans }}</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in pagination.items %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.roles|join(', ') }}</td>
+
+                    <td>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <div class="btn-group" role="group">
+                                <a class="btn btn-outline-primary me-2" href="{{ url('user_view', {id: user.id}) }}" title="{{ 'action.view'|trans }}">
+                                    {{ 'action.view'|trans }}
+                                </a>
+                                <a class="btn btn-outline-secondary me-2" href="{{ url('user_edit', {id: user.id}) }}" title="{{ 'action.edit'|trans }}">
+                                    {{ 'action.edit'|trans }}
+                                </a>
+                                <a class="btn btn-outline-success me-2" href="{{ url('user_change_password', {id: user.id}) }}" title="{{ 'action.change_password'|trans }}">
+                                    {{ 'action.change_password'|trans }}
+                                </a>
+                                <a class="btn btn-outline-info me-2" href="{{ url('user_roles', {id: user.id}) }}" title="{{ 'action.user_roles'|trans }}">
+                                    {{ 'action.user_roles'|trans }}
+                                </a>
+                            </div>
+                            <form method="post" action="{{ path('user_toggle_block', {id: user.id}) }}" style="display:inline;" onsubmit="return confirm('{{ (user.blocked is null ? 'user.block_confirm' : (user.blocked ? 'user.unblock_confirm' : 'user.block_confirm'))|trans }}');">
+                                <input type="hidden" name="_token" value="{{ csrf_token('toggle_block_' ~ user.id) }}">
+                                <button class="btn btn-outline-{{ user.blocked is null ? 'warning' : (user.blocked ? 'success' : 'warning') }} me-2" title="{{ user.blocked is null ? 'user.block'|trans : (user.blocked ? 'user.unblock'|trans : 'user.block'|trans) }}">
+                                    {{ user.blocked is null ? 'user.block'|trans : (user.blocked ? 'user.unblock'|trans : 'user.block'|trans) }}
+                                </button>
+                            </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

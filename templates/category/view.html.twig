@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.category_details'|trans({'%id%': category.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-4">
+        <h1 class="display-4 text-primary mb-4">{{ 'title.category_details'|trans({'%id%': category.id|default('')}) }}</h1>
+
+        {% if category is defined and category|length %}
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3 text-muted">{{ 'label.id'|trans }}</dt>
+                        <dd class="col-sm-9">{{ category.id }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.created_at'|trans }}</dt>
+                        <dd class="col-sm-9">{{ category.createdAt|format_date('long') }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.updated_at'|trans }}</dt>
+                        <dd class="col-sm-9">{{ category.updatedAt|format_date('long') }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.title'|trans }}</dt>
+                        <dd class="col-sm-9">{{ category.title }}</dd>
+                    </dl>
+                    <div class="mt-4">
+                        <a href="{{ url('category_index') }}" title="{{ 'action.back_to_list'|trans }}"
+                           class="btn btn-primary">
+                            {{ 'action.back_to_list'|trans }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                {{ 'message.record_not_found'|trans }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

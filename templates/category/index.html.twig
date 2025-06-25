@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.category_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.category_list'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+        <div class="add-new mb-3">
+            <a href="{{ url('category_create') }}" class="btn btn-primary" title="{{ 'action.add'|trans }}">
+                {{ 'action.add'|trans }}
+            </a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'category.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.created_at'|trans, 'category.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.updated_at'|trans, 'category.updatedAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.title'|trans, 'category.title') }}</th>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <th>{{ 'label.actions'|trans }}</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for category in pagination.items %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.createdAt|format_date('long') }}</td>
+                    <td>{{ category.updatedAt|format_date('long') }}</td>
+                    <td>{{ category.title }}</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a href="{{ url('category_view', {id: category.id}) }}" class="btn btn-outline-primary me-2" title="{{ 'action.view'|trans }}">
+                                    {{ 'action.view'|trans }}
+                                </a>
+                                <a href="{{ url('category_edit', {id: category.id}) }}" class="btn btn-outline-secondary me-2" title="{{ 'action.edit'|trans }}">
+                                    {{ 'action.edit'|trans }}
+                                </a>
+                                <a href="{{ url('category_delete', {id: category.id}) }}" class="btn btn-outline-danger" title="{{ 'action.delete'|trans }}"
+                                   onclick="return confirm('{{ 'message.confirm_delete'|trans|escape('js') }}');">
+                                    {{ 'action.delete'|trans }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            {{ 'message.empty_list'|trans }}
+        </div>
+    {% endif %}
+{% endblock %}

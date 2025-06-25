@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.overdue_reservations'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.overdue_reservations'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'reservation.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.created_at'|trans, 'reservation.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.item'|trans, 'reservation.item.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.email'|trans, 'reservation.email') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.expiration_date'|trans, 'reservation.expirationDate') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.return_date'|trans, 'reservation.returnDate') }}</th>
+                <th>{{ 'label.actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in pagination.items %}
+                <tr>
+                    <td>{{ reservation.id }}</td>
+                    <td>{{ reservation.createdAt|format_date('long') }}</td>
+                    <td>{{ reservation.item.id }}</td>
+                    <td>{{ reservation.user ? reservation.user.email : reservation.email }}</td>
+                    <td>{{ reservation.expirationDate|format_date('long') }}</td>
+                    <td>{{ reservation.returnDate ? reservation.returnDate|format_date('long') : 'label.not_returned' }}</td>
+                    <td>
+                        {% if reservation.status == 'approved' %}
+                            <a class="btn btn-outline-primary" href="{{ path('reservation_manage_return', {id: reservation.id}) }}" title="{{ 'action.manage_return'|trans }}">
+                                {{ 'action.manage_return'|trans }}
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

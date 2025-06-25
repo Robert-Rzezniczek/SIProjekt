@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="validators">
+        <body>
+            <trans-unit id="message.this_email_already_exists">
+                <source>message.this_email_already_exists</source>
+                <target>Istnieje już konto z tym emailem.</target>
+            </trans-unit>
+            <trans-unit id="message.max_characters_is_50">
+                <source>message.max_characters_is_50</source>
+                <target>Maksymalna długość to 50 znaków.</target>
+            </trans-unit>
+            <trans-unit id="message.you_should_agree">
+                <source>message.you_should_agree</source>
+                <target>Musisz zaakceptować warunki.</target>
+            </trans-unit>
+            <trans-unit id="message.enter_password">
+                <source>message.enter_password</source>
+                <target>Proszę wprowadzić hasło.</target>
+            </trans-unit>
+            <trans-unit id="message.password_too_short">
+                <source>message.password_too_short</source>
+                <target>Hasło jest za krótkie. Musi mieć co najmniej 6 znaków.</target>
+            </trans-unit>
+            <trans-unit id="message.password_not_blank">
+                <source>message.password_not_blank</source>
+                <target>Hasło nie może być puste.</target>
+            </trans-unit>
+            <trans-unit id="message.password_must_contain_letter_and_number">
+                <source>message.password_must_contain_letter_and_number</source>
+                <target>Hasło musi zawierać co najmniej jedną literę i jedną cyfrę.</target>
+            </trans-unit>
+            <trans-unit id="message.email_not_blank">
+                <source>message.email_not_blank</source>
+                <target>Email nie może być pusty.</target>
+            </trans-unit>
+            <trans-unit id="message.invalid_email_format">
+                <source>message.invalid_email_format</source>
+                <target>Nieprawidłowy format emaila.</target>
+            </trans-unit>
+            <trans-unit id="message.email_too_short">
+                <source>message.email_too_short</source>
+                <target>Email jest za krótki.</target>
+            </trans-unit>
+            <trans-unit id="message.nickname_too_long">
+                <source>message.nickname_too_long</source>
+                <target>Pseudonim jest za długi. Maksimum 50 znaków.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

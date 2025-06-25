@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.top_rated_items'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-4">
+        <h1 class="display-5 text-primary mb-4">{{ 'title.top_rated_items'|trans }}</h1>
+
+        {% if topRatedItems is not empty %}
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-primary">
+                    <tr>
+                        <th>{{ 'label.id'|trans }}</th>
+                        <th>{{ 'label.title'|trans }}</th>
+                        <th>{{ 'label.rating'|trans }}</th>
+                        <th>{{ 'label.actions'|trans }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in topRatedItems %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>
+                                {% if item.rating is null %}
+                                    <span class="text-muted">{{ 'label.no_ratings' }}</span>
+                                {% else %}
+                                    <div class="progress" style="height: 20px;">
+                                        {% set progress = item.rating|number_format(0) * 20 %}
+                                        {% set bgColor = item.rating >= 4 ? 'bg-success' : (item.rating >= 3 ? 'bg-warning' : 'bg-danger') %}
+                                        <div class="progress-bar {{ bgColor }} text-dark" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ item.rating }}" aria-valuemin="0" aria-valuemax="5">
+                                            {{ item.rating }}/5
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-outline-primary me-2" href="{{ url('item_view', {id: item.id}) }}" title="{{ 'action.view'|trans }}">
+                                        {{ 'action.view'|trans }}
+                                    </a>
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <a class="btn btn-outline-secondary me-2" href="{{ url('item_edit', {id: item.id}) }}" title="{{ 'action.edit'|trans }}">
+                                            {{ 'action.edit'|trans }}
+                                        </a>
+                                        <a class="btn btn-outline-danger" href="{{ url('item_delete', {id: item.id}) }}" title="{{ 'action.delete'|trans }}">
+                                            {{ 'action.delete'|trans }}
+                                        </a>
+                                    {% endif %}
+                                    {% if is_granted('ROLE_USER') and not is_granted('ROLE_ADMIN') %}
+                                        <a class="btn btn-outline-success me-2" href="{{ url('reservation_rent', {id: item.id}) }}" title="{{ 'action.rent'|trans }}">
+                                            {{ 'action.rent'|trans }}
+                                        </a>
+                                    {% elseif not is_granted('IS_AUTHENTICATED_FULLY') and not is_granted('ROLE_ADMIN') %}
+                                        <a class="btn btn-outline-primary" href="{{ url('reservation_reserve', {id: item.id}) }}" title="{{ 'action.reserve'|trans }}">
+                                            {{ 'action.reserve'|trans }}
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                {{ 'message.no_top_rated_items'|trans }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

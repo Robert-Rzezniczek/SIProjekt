@@ -1,0 +1,26 @@
+ ------- -------- ---- ---------------------- 
+  State   Domain   Id   Message Preview (en)  
+ ------- -------- ---- ---------------------- 
+
+ ------- -------- ---- ---------------------- ------------------------------- 
+  State   Domain   Id   Message Preview (pl)   Fallback Message Preview (en)  
+ ------- -------- ---- ---------------------- ------------------------------- 
+
+ Dropping database schema...
+
+ [OK] Database schema dropped successfully!                                                                             
+
+[notice] Migrating up to DoctrineMigrations\Version20250625170248
+[notice] finished in 411.9ms, used 24M memory, 1 migrations executed, 15 sql queries
+
+ [OK] Successfully migrated to version: DoctrineMigrations\Version20250625170248                                        
+
+
+   > purging database
+   > loading App\DataFixtures\AppFixtures
+   > loading App\DataFixtures\CategoryFixtures
+   > loading App\DataFixtures\UserFixtures
+   > loading App\DataFixtures\TagFixtures
+   > loading App\DataFixtures\ItemFixtures
+   > loading App\DataFixtures\ItemRatingFixtures
+   > loading App\DataFixtures\ReservationFixtures

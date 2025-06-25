@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.register'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="display-6 text-primary text-center mb-5">{{ 'title.register'|trans }}</h1>
+
+                {% for label, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ label == 'success' ? 'success' : 'danger' }} alert-dismissible fade show" role="alert">
+                            {{ message|trans }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        {{ form_start(registrationForm, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate'}}) }}
+                        {{ form_errors(registrationForm) }}
+
+                        <div class="mb-4">
+                            {{ form_label(registrationForm.email, 'label.email'|trans, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control', 'required': 'required', 'placeholder': 'label.email'|trans}}) }}
+                            {{ form_errors(registrationForm.email) }}
+                        </div>
+
+                        <div class="mb-4">
+                            {{ form_label(registrationForm.nickname, 'label.nickname'|trans, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.nickname, {'attr': {'class': 'form-control', 'placeholder': 'label.nickname'|trans}}) }}
+                            {{ form_errors(registrationForm.nickname) }}
+                        </div>
+
+                        <div class="mb-4">
+                            {{ form_label(registrationForm.plainPassword, 'label.password'|trans, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control', 'required': 'required', 'autocomplete': 'new-password', 'placeholder': 'label.password'|trans}}) }}
+                            {{ form_errors(registrationForm.plainPassword) }}
+                            <div class="invalid-feedback">{{ 'message.password_required'|trans }}</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                {{ form_label(registrationForm.agreeTerms, null, {'label_attr': {'class': 'form-check-label'}}) }}
+                                {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+                                {{ form_errors(registrationForm.agreeTerms) }}
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">{{ 'action.register'|trans }}</button>
+                        </div>
+                        {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

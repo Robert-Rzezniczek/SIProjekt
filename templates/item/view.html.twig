@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.item_details'|trans({'%id%': item.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-4">
+        <h1 class="display-5 text-primary mb-4">{{ 'title.item_details'|trans({'%id%': item.id|default('')}) }}</h1>
+
+        {% if item is defined and item|length %}
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3 text-muted">{{ 'label.id'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.id }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.created_at'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.createdAt|format_date('long') }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.updated_at'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.updatedAt|format_date('long') }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.title'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.title }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.description'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.description }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.quantity'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.quantity }}</dd>
+                        <dt class="col-sm-3 text-muted">{{ 'label.category'|trans }}</dt>
+                        <dd class="col-sm-9">{{ item.category.title }}</dd>
+                    </dl>
+                    {% if item.imageFilename is defined and item.imageFilename|length %}
+                        <div class="mt-4 text-center">
+                            <img alt="img" class="img-fluid rounded shadow-sm" src="{{ asset(item_images_directory ~ item.imageFilename) }}" style="max-width: 300px;">
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info mt-4" role="alert">
+                            {{ 'message.no_image_available'|trans }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-light d-flex flex-wrap gap-2 justify-content-between">
+                    {% if is_granted('ITEM_RENT', item) and not is_granted('ROLE_ADMIN') %}
+                        <a class="btn btn-outline-success" href="{{ url('reservation_rent', {id: item.id}) }}" title="{{ 'action.rent'|trans }}">
+                            <i class="bi bi-cart-plus"></i> {{ 'action.rent'|trans }}
+                        </a>
+                    {% endif %}
+                    {% if is_granted('ITEM_RESERVE', item) %}
+                        <a class="btn btn-outline-primary" href="{{ url('reservation_reserve', {id: item.id}) }}" title="{{ 'action.reserve'|trans }}">
+                            <i class="bi bi-clock"></i> {{ 'action.reserve'|trans }}
+                        </a>
+                    {% endif %}
+                    <a href="{{ url('item_index') }}" title="{{ 'action.back_to_list'|trans }}" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> {{ 'action.back_to_list'|trans }}
+                    </a>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                {{ 'message.record_not_found'|trans }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

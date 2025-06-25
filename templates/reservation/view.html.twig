@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.reservation_details'|trans({'%id%': reservation.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="display-6 text-primary text-center mb-5">{{ 'title.reservation_details'|trans({'%id%': reservation.id|default('')}) }}</h1>
+
+        {% if reservation is defined %}
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">{{ 'label.id'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.id }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.item'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.item.title|default('—') }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.user'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.user ? reservation.user.email : 'label.guest'|trans }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.email'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.email|default('—') }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.nickname'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.nickname|default('—') }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.comment'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.comment|default('—') }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.status'|trans }}</dt>
+                        <dd class="col-sm-8">{{ ('status.' ~ reservation.status)|trans }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.created_at'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.createdAt|format_date('long') }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.expiration_date'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.expirationDate ? reservation.expirationDate|format_date('long') : '—' }}</dd>
+
+                        <dt class="col-sm-4 text-muted">{{ 'label.loan_date'|trans }}</dt>
+                        <dd class="col-sm-8">{{ reservation.loanDate ? reservation.loanDate|format_date('long') : '—' }}</dd>
+                    </dl>
+                </div>
+                <div class="card-footer bg-light text-end">
+                    <a href="{{ path('reservation_index') }}" class="btn btn-outline-secondary" title="{{ 'action.back_to_list'|trans }}">
+                        {{ 'action.back_to_list'|trans }}
+                    </a>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ 'message.record_not_found'|trans }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

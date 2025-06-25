@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="pl" datatype="plaintext" original="messages">
+    <body>
+      <trans-unit id="label.id">
+        <source>label.id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="label.created_at">
+        <source>label.created_at</source>
+        <target>Data utworzenia</target>
+      </trans-unit>
+      <trans-unit id="label.updated_at">
+        <source>label.updated_at</source>
+        <target>Data modyfikacji</target>
+      </trans-unit>
+      <trans-unit id="label.title">
+        <source>label.title</source>
+        <target>Tytuł</target>
+      </trans-unit>
+      <trans-unit id="label.actions">
+        <source>label.actions</source>
+        <target>Akcje</target>
+      </trans-unit>
+      <trans-unit id="label.content">
+        <source>label.content</source>
+        <target>Treść</target>
+      </trans-unit>
+      <trans-unit id="label.tags">
+        <source>label.tags</source>
+        <target>Tagi</target>
+      </trans-unit>
+      <trans-unit id="message.empty_list">
+        <source>message.empty_list</source>
+        <target>Lista jest pusta.</target>
+      </trans-unit>
+      <trans-unit id="message.record_not_found">
+        <source>message.record_not_found</source>
+        <target>Nie znaleziono rekordu.</target>
+      </trans-unit>
+      <trans-unit id="title.category_list">
+        <source>title.category_list</source>
+        <target>Lista kategorii</target>
+      </trans-unit>
+      <trans-unit id="title.record_list">
+        <source>title.record_list</source>
+        <target>Lista rekordów</target>
+      </trans-unit>
+      <trans-unit id="title.record_view">
+        <source>title.record_view</source>
+        <target>Widok rekordu #%id%</target>
+      </trans-unit>
+      <trans-unit id="action.view">
+        <source>action.view</source>
+        <target>Wyświetl</target>
+      </trans-unit>
+      <trans-unit id="title.task_details">
+        <source>title.task_details</source>
+        <target>Szczegóły zadania #%id%</target>
+      </trans-unit>
+      <trans-unit id="message.no_tags">
+        <source>message.no_tags</source>
+        <target>Brak tagów</target>
+      </trans-unit>
+      <trans-unit id="label.page_not_found">
+        <source>label.page_not_found</source>
+        <target>Strona nie znaleziona</target>
+      </trans-unit>
+      <trans-unit id="label.error_404">
+        <source>label.error_404</source>
+        <target>Błąd 404</target>
+      </trans-unit>
+      <trans-unit id="message.page_not_found">
+        <source>message.page_not_found</source>
+        <target>Nie znaleziono poszukiwanej strony.</target>
+      </trans-unit>
+      <trans-unit id="label.back_to_home">
+        <source>label.back_to_home</source>
+        <target>Powrót do strony głównej</target>
+      </trans-unit>
+      <trans-unit id="message.access_denied">
+        <source>message.access_denied</source>
+        <target>Odmowa dostępu. Nie masz uprawnień do przeglądania tej strony.</target>
+      </trans-unit>
+      <trans-unit id="message.created_successfully">
+        <source>message.created_successfully</source>
+        <target>Pomyślnie utworzono.</target>
+      </trans-unit>
+      <trans-unit id="message.edited_successfully">
+        <source>message.edited_successfully</source>
+        <target>Pomyślnie edytowano.</target>
+      </trans-unit>
+      <trans-unit id="message.category_contains_tasks">
+        <source>message.category_contains_tasks</source>
+        <target>Ta kategoria zawiera zadania i nie może zostać usunięta.</target>
+      </trans-unit>
+      <trans-unit id="message.deleted_successfully">
+        <source>message.deleted_successfully</source>
+        <target>Pomyślnie usunięto.</target>
+      </trans-unit>
+      <trans-unit id="message.updated_successfully">
+        <source>message.updated_successfully</source>
+        <target>Pomyślnie zaktualizowano.</target>
+      </trans-unit>
+      <trans-unit id="message.password_changed_successfully">
+        <source>message.password_changed_successfully</source>
+        <target>Hasło zmieniono pomyślnie.</target>
+      </trans-unit>
+      <trans-unit id="message.reservation_failed">
+        <source>message.reservation_failed</source>
+        <target>Rezerwacja nie powiodła się. Proszę spróbować ponownie.</target>
+      </trans-unit>
+      <trans-unit id="message.item_not_available">
+        <source>message.item_not_available</source>
+        <target>Przedmiot nie jest dostępny do rezerwacji.</target>
+      </trans-unit>
+      <trans-unit id="message.rented_successfully">
+        <source>message.rented_successfully</source>
+        <target>Przedmiot wypożyczony pomyślnie.</target>
+      </trans-unit>
+      <trans-unit id="message.rent_failed">
+        <source>message.rent_failed</source>
+        <target>Wypożyczenie nie powiodło się. Proszę spróbować ponownie.</target>
+      </trans-unit>
+      <trans-unit id="message.managed_successfully">
+        <source>message.managed_successfully</source>
+        <target>Pomyślnie zarządzano.</target>
+      </trans-unit>
+      <trans-unit id="message.action_not_allowed">
+        <source>message.action_not_allowed</source>
+        <target>Tej akcji nie można wykonać.</target>
+      </trans-unit>
+      <trans-unit id="message.overdue_reservations_warning">
+        <source>message.overdue_reservations_warning</source>
+        <target>Masz zaległe rezerwacje. Proszę je wkrótce zwrócić.</target>
+      </trans-unit>
+      <trans-unit id="message.return_requested_successfully">
+        <source>message.return_requested_successfully</source>
+        <target>Żądanie zwrotu zostało pomyślnie złożone.</target>
+      </trans-unit>
+      <trans-unit id="message.return_failed">
+        <source>message.return_failed</source>
+        <target>Żądanie zwrotu nie powiodło się. Proszę spróbować ponownie.</target>
+      </trans-unit>
+      <trans-unit id="label.return_managed_successfully">
+        <source>label.return_managed_successfully</source>
+        <target>Zwrot zarządzany pomyślnie</target>
+      </trans-unit>
+      <trans-unit id="label.action_not_allowed">
+        <source>label.action_not_allowed</source>
+        <target>Akcja niedozwolona</target>
+      </trans-unit>
+      <trans-unit id="message.cannot_change_own_role">
+        <source>message.cannot_change_own_role</source>
+        <target>Nie możesz zmienić własnej roli.</target>
+      </trans-unit>
+      <trans-unit id="message.cannot_block_self">
+        <source>message.cannot_block_self</source>
+        <target>Nie możesz zablokować siebie.</target>
+      </trans-unit>
+      <trans-unit id="label.items">
+        <source>label.items</source>
+        <target>Przedmioty</target>
+      </trans-unit>
+      <trans-unit id="label.top_rated_items">
+        <source>label.top_rated_items</source>
+        <target>Najlepiej oceniane przedmioty</target>
+      </trans-unit>
+      <trans-unit id="label.item_search">
+        <source>label.item_search</source>
+        <target>Wyszukiwanie przedmiotów</target>
+      </trans-unit>
+      <trans-unit id="label.my_reservations">
+        <source>label.my_reservations</source>
+        <target>Moje rezerwacje</target>
+      </trans-unit>
+      <trans-unit id="label.manage_items">
+        <source>label.manage_items</source>
+        <target>Zarządzaj przedmiotami</target>
+      </trans-unit>
+      <trans-unit id="label.manage_reservations">
+        <source>label.manage_reservations</source>
+        <target>Zarządzaj rezerwacjami</target>
+      </trans-unit>
+      <trans-unit id="label.manage_users">
+        <source>label.manage_users</source>
+        <target>Zarządzaj użytkownikami</target>
+      </trans-unit>
+      <trans-unit id="label.manage_categories">
+        <source>label.manage_categories</source>
+        <target>Zarządzaj kategoriami</target>
+      </trans-unit>
+      <trans-unit id="label.manage_tags">
+        <source>label.manage_tags</source>
+        <target>Zarządzaj tagami</target>
+      </trans-unit>
+      <trans-unit id="message.logged_in_as">
+        <source>message.logged_in_as</source>
+        <target>Zalogowano jako</target>
+      </trans-unit>
+      <trans-unit id="label.my_profile">
+        <source>label.my_profile</source>
+        <target>Mój profil</target>
+      </trans-unit>
+      <trans-unit id="label.logout">
+        <source>label.logout</source>
+        <target>Wyloguj</target>
+      </trans-unit>
+      <trans-unit id="label.login">
+        <source>label.login</source>
+        <target>Zaloguj</target>
+      </trans-unit>
+      <trans-unit id="label.register">
+        <source>label.register</source>
+        <target>Zarejestruj</target>
+      </trans-unit>
+      <trans-unit id="title.category_create">
+        <source>title.category_create</source>
+        <target>Stwórz kategorię</target>
+      </trans-unit>
+      <trans-unit id="action.save">
+        <source>action.save</source>
+        <target>Zapisz</target>
+      </trans-unit>
+      <trans-unit id="title.category_delete">
+        <source>title.category_delete</source>
+        <target>Usuń kategorię</target>
+      </trans-unit>
+      <trans-unit id="action.delete">
+        <source>action.delete</source>
+        <target>Usuń</target>
+      </trans-unit>
+      <trans-unit id="title.category_edit">
+        <source>title.category_edit</source>
+        <target>Edytuj kategorię</target>
+      </trans-unit>
+      <trans-unit id="action.edit">
+        <source>action.edit</source>
+        <target>Edytuj</target>
+      </trans-unit>
+      <trans-unit id="action.add">
+        <source>action.add</source>
+        <target>Dodaj</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_delete">
+        <source>message.confirm_delete</source>
+        <target>Czy na pewno chcesz usunąć ten element?</target>
+      </trans-unit>
+      <trans-unit id="title.category_details">
+        <source>title.category_details</source>
+        <target>Szczegóły kategorii</target>
+      </trans-unit>
+      <trans-unit id="action.back_to_list">
+        <source>action.back_to_list</source>
+        <target>Powrót do listy</target>
+      </trans-unit>
+      <trans-unit id="message.form_error">
+        <source>message.form_error</source>
+        <target>Wystąpił błąd w formularzu. Proszę sprawdzić dane wejściowe.</target>
+      </trans-unit>
+      <trans-unit id="title.item_create">
+        <source>title.item_create</source>
+        <target>Stwórz przedmiot</target>
+      </trans-unit>
+      <trans-unit id="title.item_delete">
+        <source>title.item_delete</source>
+        <target>Usuń przedmiot</target>
+      </trans-unit>
+      <trans-unit id="title.item_edit">
+        <source>title.item_edit</source>
+        <target>Edytuj przedmiot</target>
+      </trans-unit>
+      <trans-unit id="title.item_list">
+        <source>title.item_list</source>
+        <target>Lista przedmiotów</target>
+      </trans-unit>
+      <trans-unit id="label.rating">
+        <source>label.rating</source>
+        <target>Ocena</target>
+      </trans-unit>
+      <trans-unit id="label.quantity">
+        <source>label.quantity</source>
+        <target>Ilość</target>
+      </trans-unit>
+      <trans-unit id="label.category">
+        <source>label.category</source>
+        <target>Kategoria</target>
+      </trans-unit>
+      <trans-unit id="label.no_rating">
+        <source>label.no_rating</source>
+        <target>Brak oceny</target>
+      </trans-unit>
+      <trans-unit id="action.rent">
+        <source>action.rent</source>
+        <target>Wypożycz</target>
+      </trans-unit>
+      <trans-unit id="action.reserve">
+        <source>action.reserve</source>
+        <target>Zarezerwuj</target>
+      </trans-unit>
+      <trans-unit id="title.item_search">
+        <source>title.item_search</source>
+        <target>Wyszukiwanie przedmiotów</target>
+      </trans-unit>
+      <trans-unit id="action.search">
+        <source>action.search</source>
+        <target>Szukaj</target>
+      </trans-unit>
+      <trans-unit id="message.no_results">
+        <source>message.no_results</source>
+        <target>Nie znaleziono wyników.</target>
+      </trans-unit>
+      <trans-unit id="title.top_rated_items">
+        <source>title.top_rated_items</source>
+        <target>Najlepiej oceniane przedmioty</target>
+      </trans-unit>
+      <trans-unit id="message.no_top_rated_items">
+        <source>message.no_top_rated_items</source>
+        <target>Brak dostępnych najlepiej ocenianych przedmiotów.</target>
+      </trans-unit>
+      <trans-unit id="title.item_details">
+        <source>title.item_details</source>
+        <target>Szczegóły przedmiotu</target>
+      </trans-unit>
+      <trans-unit id="label.description">
+        <source>label.description</source>
+        <target>Opis</target>
+      </trans-unit>
+      <trans-unit id="message.no_image_available">
+        <source>message.no_image_available</source>
+        <target>Brak dostępnego obrazu.</target>
+      </trans-unit>
+      <trans-unit id="title.profile_change_password">
+        <source>title.profile_change_password</source>
+        <target>Zmień hasło</target>
+      </trans-unit>
+      <trans-unit id="action.change_password">
+        <source>action.change_password</source>
+        <target>Zmień hasło</target>
+      </trans-unit>
+      <trans-unit id="title.profile_edit">
+        <source>title.profile_edit</source>
+        <target>Edytuj profil</target>
+      </trans-unit>
+      <trans-unit id="label.admin_panel">
+        <source>label.admin_panel</source>
+        <target>Panel administratora</target>
+      </trans-unit>
+      <trans-unit id="label.user_panel">
+        <source>label.user_panel</source>
+        <target>Panel użytkownika</target>
+      </trans-unit>
+      <trans-unit id="label.welcome_admin">
+        <source>label.welcome_admin</source>
+        <target>Witaj, Administratorze!</target>
+      </trans-unit>
+      <trans-unit id="label.welcome_user">
+        <source>label.welcome_user</source>
+        <target>Witaj, Użytkowniku!</target>
+      </trans-unit>
+      <trans-unit id="label.profile_actions">
+        <source>label.profile_actions</source>
+        <target>Akcje profilu</target>
+      </trans-unit>
+      <trans-unit id="label.edit_profile">
+        <source>label.edit_profile</source>
+        <target>Edytuj profil</target>
+      </trans-unit>
+      <trans-unit id="label.change_password">
+        <source>label.change_password</source>
+        <target>Zmień hasło</target>
+      </trans-unit>
+      <trans-unit id="title.register">
+        <source>title.register</source>
+        <target>Zarejestruj się</target>
+      </trans-unit>
+      <trans-unit id="label.nickname">
+        <source>label.nickname</source>
+        <target>Pseudonim</target>
+      </trans-unit>
+      <trans-unit id="label.password">
+        <source>label.password</source>
+        <target>Hasło</target>
+      </trans-unit>
+      <trans-unit id="message.password_required">
+        <source>message.password_required</source>
+        <target>Hasło jest wymagane.</target>
+      </trans-unit>
+      <trans-unit id="label.agree_terms">
+        <source>label.agree_terms</source>
+        <target>Zaakceptuj warunki</target>
+      </trans-unit>
+      <trans-unit id="action.register">
+        <source>action.register</source>
+        <target>Zarejestruj się</target>
+      </trans-unit>
+      <trans-unit id="title.reservation_list">
+        <source>title.reservation_list</source>
+        <target>Lista rezerwacji</target>
+      </trans-unit>
+      <trans-unit id="label.item">
+        <source>label.item</source>
+        <target>Przedmiot</target>
+      </trans-unit>
+      <trans-unit id="label.email">
+        <source>label.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="label.status">
+        <source>label.status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="label.loan_date">
+        <source>label.loan_date</source>
+        <target>Data wypożyczenia</target>
+      </trans-unit>
+      <trans-unit id="label.expiration_date">
+        <source>label.expiration_date</source>
+        <target>Data wygaśnięcia</target>
+      </trans-unit>
+      <trans-unit id="label.manage">
+        <source>label.manage</source>
+        <target>Zarządzaj</target>
+      </trans-unit>
+      <trans-unit id="label.manage_return">
+        <source>label.manage_return</source>
+        <target>Zarządzaj zwrotem</target>
+      </trans-unit>
+      <trans-unit id="label.reservation_manage">
+        <source>label.reservation_manage</source>
+        <target>Zarządzanie rezerwacjami</target>
+      </trans-unit>
+      <trans-unit id="label.user">
+        <source>label.user</source>
+        <target>Użytkownik</target>
+      </trans-unit>
+      <trans-unit id="label.current_status">
+        <source>label.current_status</source>
+        <target>Obecny status</target>
+      </trans-unit>
+      <trans-unit id="label.comment">
+        <source>label.comment</source>
+        <target>Komentarz</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_approve">
+        <source>message.confirm_approve</source>
+        <target>Czy na pewno chcesz zatwierdzić tę rezerwację?</target>
+      </trans-unit>
+      <trans-unit id="label.approve">
+        <source>label.approve</source>
+        <target>Zatwierdź</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_reject">
+        <source>message.confirm_reject</source>
+        <target>Czy na pewno chcesz odrzucić tę rezerwację?</target>
+      </trans-unit>
+      <trans-unit id="label.reject">
+        <source>label.reject</source>
+        <target>Odrzuć</target>
+      </trans-unit>
+      <trans-unit id="message.no_action_needed">
+        <source>message.no_action_needed</source>
+        <target>Nie ma potrzeby podejmowania działań w tej chwili.</target>
+      </trans-unit>
+      <trans-unit id="label.user_rating">
+        <source>label.user_rating</source>
+        <target>Ocena użytkownika</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_approve_return">
+        <source>message.confirm_approve_return</source>
+        <target>Czy na pewno chcesz zatwierdzić ten zwrot?</target>
+      </trans-unit>
+      <trans-unit id="label.approve_return">
+        <source>label.approve_return</source>
+        <target>Zatwierdź zwrot</target>
+      </trans-unit>
+      <trans-unit id="label.return_request">
+        <source>label.return_request</source>
+        <target>Żądanie zwrotu</target>
+      </trans-unit>
+      <trans-unit id="label.no_reservations">
+        <source>label.no_reservations</source>
+        <target>Nie znaleziono rezerwacji.</target>
+      </trans-unit>
+      <trans-unit id="title.overdue_reservations">
+        <source>title.overdue_reservations</source>
+        <target>Zaległe rezerwacje</target>
+      </trans-unit>
+      <trans-unit id="label.return_date">
+        <source>label.return_date</source>
+        <target>Data zwrotu</target>
+      </trans-unit>
+      <trans-unit id="action.manage_return">
+        <source>action.manage_return</source>
+        <target>Zarządzaj zwrotem</target>
+      </trans-unit>
+      <trans-unit id="title.rent_item">
+        <source>title.rent_item</source>
+        <target>Wypożycz przedmiot</target>
+      </trans-unit>
+      <trans-unit id="title.reserve_item">
+        <source>title.reserve_item</source>
+        <target>Zarezerwuj przedmiot</target>
+      </trans-unit>
+      <trans-unit id="title.request_return">
+        <source>title.request_return</source>
+        <target>Zwróć</target>
+      </trans-unit>
+      <trans-unit id="action.request_return">
+        <source>action.request_return</source>
+        <target>Zwróć</target>
+      </trans-unit>
+      <trans-unit id="title.reservation_details">
+        <source>title.reservation_details</source>
+        <target>Szczegóły rezerwacji</target>
+      </trans-unit>
+      <trans-unit id="label.guest">
+        <source>label.guest</source>
+        <target>Gość</target>
+      </trans-unit>
+      <trans-unit id="title.login">
+        <source>title.login</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="action.logout">
+        <source>action.logout</source>
+        <target>Wyloguj</target>
+      </trans-unit>
+      <trans-unit id="message.email_required">
+        <source>message.email_required</source>
+        <target>Email jest wymagany.</target>
+      </trans-unit>
+      <trans-unit id="action.sign_in">
+        <source>action.sign_in</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="title.tag_create">
+        <source>title.tag_create</source>
+        <target>Stwórz tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_delete">
+        <source>title.tag_delete</source>
+        <target>Usuń tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_edit">
+        <source>title.tag_edit</source>
+        <target>Edytuj tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_list">
+        <source>title.tag_list</source>
+        <target>Lista tagów</target>
+      </trans-unit>
+      <trans-unit id="title.tag_details">
+        <source>title.tag_details</source>
+        <target>Szczegóły tagu</target>
+      </trans-unit>
+      <trans-unit id="title.change_password">
+        <source>title.change_password</source>
+        <target>Zmień hasło</target>
+      </trans-unit>
+      <trans-unit id="title.user_list">
+        <source>title.user_list</source>
+        <target>Lista użytkowników</target>
+      </trans-unit>
+      <trans-unit id="label.roles">
+        <source>label.roles</source>
+        <target>Role</target>
+      </trans-unit>
+      <trans-unit id="action.user_roles">
+        <source>action.user_roles</source>
+        <target>Zarządzaj rolami</target>
+      </trans-unit>
+      <trans-unit id="user.block_confirm">
+        <source>user.block_confirm</source>
+        <target>Czy na pewno chcesz zablokować tego użytkownika?</target>
+      </trans-unit>
+      <trans-unit id="user.unblock_confirm">
+        <source>user.unblock_confirm</source>
+        <target>Czy na pewno chcesz odblokować tego użytkownika?</target>
+      </trans-unit>
+      <trans-unit id="user.block">
+        <source>user.block</source>
+        <target>Zablokuj</target>
+      </trans-unit>
+      <trans-unit id="user.unblock">
+        <source>user.unblock</source>
+        <target>Odblokuj</target>
+      </trans-unit>
+      <trans-unit id="title.user_roles">
+        <source>title.user_roles</source>
+        <target>Zarządzaj rolami użytkownika</target>
+      </trans-unit>
+      <trans-unit id="title.user_details">
+        <source>title.user_details</source>
+        <target>Szczegóły użytkownika</target>
+      </trans-unit>
+      <trans-unit id="label.new_password">
+        <source>label.new_password</source>
+        <target>Nowe hasło</target>
+      </trans-unit>
+      <trans-unit id="label.search_by_title">
+        <source>label.search_by_title</source>
+        <target>Szukaj po tytule</target>
+      </trans-unit>
+      <trans-unit id="label.any_rating">
+        <source>label.any_rating</source>
+        <target>Dowolna ocena</target>
+      </trans-unit>
+      <trans-unit id="label.5_stars">
+        <source>label.5_stars</source>
+        <target>5 gwiazdek</target>
+      </trans-unit>
+      <trans-unit id="label.4_stars_and_above">
+        <source>label.4_stars_and_above</source>
+        <target>4 gwiazdki i więcej</target>
+      </trans-unit>
+      <trans-unit id="label.3_stars_and_above">
+        <source>label.3_stars_and_above</source>
+        <target>3 gwiazdki i więcej</target>
+      </trans-unit>
+      <trans-unit id="label.2_stars_and_above">
+        <source>label.2_stars_and_above</source>
+        <target>2 gwiazdki i więcej</target>
+      </trans-unit>
+      <trans-unit id="label.1_star_and_above">
+        <source>label.1_star_and_above</source>
+        <target>1 gwiazdka i więcej</target>
+      </trans-unit>
+      <trans-unit id="label.any_category">
+        <source>label.any_category</source>
+        <target>Dowolna kategoria</target>
+      </trans-unit>
+      <trans-unit id="label.any_tag">
+        <source>label.any_tag</source>
+        <target>Dowolny tag</target>
+      </trans-unit>
+      <trans-unit id="label.none">
+        <source>label.none</source>
+        <target>Brak</target>
+      </trans-unit>
+      <trans-unit id="label.image">
+        <source>label.image</source>
+        <target>Obraz</target>
+      </trans-unit>
+      <trans-unit id="label.remove_image">
+        <source>label.remove_image</source>
+        <target>Usuń obraz</target>
+      </trans-unit>
+      <trans-unit id="label.return_comment">
+        <source>label.return_comment</source>
+        <target>Komentarz do zwrotu</target>
+      </trans-unit>
+      <trans-unit id="label.item_rating">
+        <source>label.item_rating</source>
+        <target>Ocena przedmiotu</target>
+      </trans-unit>
+      <trans-unit id="label.is_admin">
+        <source>label.is_admin</source>
+        <target>Uprawnienia administratora</target>
+      </trans-unit>
+      <trans-unit id="status.approved">
+        <source>status.approved</source>
+        <target>Wypożyczony</target>
+      </trans-unit>
+      <trans-unit id="status.returned">
+        <source>status.returned</source>
+        <target>Zwrócony</target>
+      </trans-unit>
+      <trans-unit id="status.return_pending">
+        <source>status.return_pending</source>
+        <target>Oczekujący na zwrot</target>
+      </trans-unit>
+      <trans-unit id="status.pending">
+        <source>status.pending</source>
+        <target>Oczekujący</target>
+      </trans-unit>
+      <trans-unit id="status.rejected">
+        <source>status.rejected</source>
+        <target>Odrzucony</target>
+      </trans-unit>
+      <trans-unit id="label.dont_wanna_rate">
+        <source>label.dont_wanna_rate</source>
+        <target>Nie chcę oceniać</target>
+      </trans-unit>
+      <trans-unit id="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="Pseudonim">
+        <source>Pseudonim</source>
+        <target>Pseudonim</target>
+      </trans-unit>
+      <trans-unit id="Hasło">
+        <source>Hasło</source>
+        <target>Hasło</target>
+      </trans-unit>
+      <trans-unit id="Agree terms">
+        <source>Agree terms</source>
+        <target>Zaakceptuj warunki</target>
+      </trans-unit>
+      <trans-unit id="message.item_contains_reservations">
+        <source>message.item_contains_reservations</source>
+        <target>Wypożyczenia zawierają ten przedmiot. Nie można usunąć.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

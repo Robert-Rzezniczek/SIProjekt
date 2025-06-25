@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.reservation_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.reservation_list'|trans }}</h1>
+    {% if pagination is defined and pagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'reservation.id') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.created_at'|trans, 'reservation.createdAt') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.item'|trans, 'item.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.nickname'|trans, 'reservation.nickname') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.email'|trans, 'reservation.email') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.status'|trans, 'reservation.status') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.loan_date'|trans, 'reservation.loanDate') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.expiration_date'|trans, 'reservation.expirationDate') }}</th>
+                <th>{{ 'label.actions'|trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in pagination.items %}
+                <tr>
+                    <td>{{ reservation.id }}</td>
+                    <td>{{ reservation.createdAt|format_date('long') }}</td>
+                    <td>{{ reservation.item.title }}</td>
+                    <td>{{ reservation.nickname }}</td>
+                    <td>{{ reservation.email }}</td>
+                    <td>
+                        <span class="badge
+                            {% if reservation.status == 'approved' %}
+                                bg-success
+                            {% elseif reservation.status == 'pending' %}
+                                bg-warning text-dark
+                            {% elseif reservation.status == 'rejected' %}
+                                bg-danger
+                            {% elseif reservation.status == 'return_pending' %}
+                                bg-info text-dark
+                            {% elseif reservation.status == 'returned' %}
+                                bg-primary
+                            {% else %}
+                                bg-secondary
+                            {% endif %}
+                        ">
+                            {{ ('status.' ~ reservation.status)|trans }}
+                        </span>
+                    </td>
+                    <td>{{ reservation.loanDate|format_date('long') }}</td>
+                    <td>{{ reservation.expirationDate|format_date('long') }}</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-outline-primary me-2" href="{{ url('reservation_view', {id: reservation.id}) }}" title="{{ 'action.view'|trans }}">
+                                {{ 'action.view'|trans }}
+                            </a>
+                            {% if is_granted('RESERVATION_MANAGE', reservation) %}
+                                <a class="btn btn-outline-secondary me-2" href="{{ path('reservation_manage', {id: reservation.id}) }}" title="{{ 'label.manage'|trans }}">
+                                    {{ 'label.manage'|trans }}
+                                </a>
+                            {% endif %}
+                            {% if is_granted('RESERVATION_MANAGE_RETURN', reservation) %}
+                                <a class="btn btn-outline-success" href="{{ path('reservation_manage_return', {id: reservation.id}) }}" title="{{ 'label.manage_return'|trans }}">
+                                    {{ 'label.manage_return'|trans }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation text-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    {% else %}
+        <p>
+            {{ 'message.empty_list'|trans }}
+        </p>
+    {% endif %}
+{% endblock %}

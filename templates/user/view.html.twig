@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.user_details'|trans({'%id%': user.id|default('')}) }}
+{% endblock %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="display-6 text-primary text-center mb-5">{{ 'title.user_details'|trans({'%id%': user.id|default('')}) }}</h1>
+
+        {% if user is defined and user|length %}
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <dl class="row">
+                        <dt class="col-sm-4 text-muted">{{ 'label.id'|trans }}</dt>
+                        <dd class="col-sm-8">{{ user.id }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.email'|trans }}</dt>
+                        <dd class="col-sm-8">{{ user.email }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.password'|trans }}</dt>
+                        <dd class="col-sm-8">********</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.nickname'|trans }}</dt>
+                        <dd class="col-sm-8">{{ user.nickname|default('—') }}</dd>
+                        <dt class="col-sm-4 text-muted">{{ 'label.roles'|trans }}</dt>
+                        <dd class="col-sm-8">{{ user.roles|join(', ') }}</dd>
+                    </dl>
+                </div>
+                <div class="card-footer bg-light text-end">
+                    <a href="{{ url('user_index') }}" class="btn btn-outline-secondary" title="{{ 'action.back_to_list'|trans }}">
+                        {{ 'action.back_to_list'|trans }}
+                    </a>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ 'message.record_not_found'|trans }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

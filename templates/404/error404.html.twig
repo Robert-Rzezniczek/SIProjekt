@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'label.page_not_found'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center justify-content-center min-vh-75 text-center py-5">
+        <div>
+            <h1 class="display-4 fw-bold text-warning mb-4">404</h1>
+            <p class="h5 text-dark">{{ 'label.error_404'|trans }}</p>
+            <p class="text-muted">{{ 'message.page_not_found'|trans }}</p>
+
+            <a href="{{ path('item_index') }}" class="btn btn-outline-primary mt-3">
+                {{ 'label.back_to_home'|trans }}
+            </a>
+        </div>
+    </div>
+{% endblock %}

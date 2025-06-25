@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'label.reservation_manage'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="mb-4">{{ 'label.reservation_manage'|trans }}</h1>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">{{ 'label.item'|trans }}</dt>
+                <dd class="col-sm-9">{{ reservation.item.title }}</dd>
+
+                <dt class="col-sm-3">{{ 'label.user'|trans }}</dt>
+                <dd class="col-sm-9">{{ reservation.email }}</dd>
+
+                <dt class="col-sm-3">{{ 'label.current_status'|trans }}</dt>
+                <dd class="col-sm-9">
+                    <span class="badge
+                        {% if reservation.status == 'approved' %}
+                            bg-success
+                        {% elseif reservation.status == 'pending' %}
+                            bg-warning text-dark
+                        {% elseif reservation.status == 'rejected' %}
+                            bg-danger
+                        {% elseif reservation.status == 'returned' %}
+                            bg-primary
+                        {% else %}
+                            bg-secondary
+                        {% endif %}
+                    ">
+                        {{ ('status.' ~ reservation.status)|trans }}
+                    </span>
+                </dd>
+
+                <dt class="col-sm-3">{{ 'label.comment'|trans }}</dt>
+                <dd class="col-sm-9">
+                    {{ reservation.comment is not empty ? reservation.comment : '—' }}
+                </dd>
+            </dl>
+
+            {% if reservation.status == 'pending' %}
+                <div class="d-flex justify-content-end mt-4 gap-2">
+                    <a href="{{ path('reservation_manage', {id: reservation.id, decision: 'approved'}) }}"
+                       class="btn btn-success me-2"
+                       onclick="return confirm('{{ 'message.confirm_approve'|trans }}');">
+                        <i class="bi bi-check-circle me-1"></i> {{ 'label.approve'|trans }}
+                    </a>
+                    <a href="{{ path('reservation_manage', {id: reservation.id, decision: 'rejected'}) }}"
+                       class="btn btn-danger me-2"
+                       onclick="return confirm('{{ 'message.confirm_reject'|trans }}');">
+                        <i class="bi bi-x-circle me-1"></i> {{ 'label.reject'|trans }}
+                    </a>
+                </div>
+            {% else %}
+                <p class="text-muted mt-4">{{ 'message.no_action_needed'|trans }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a href="{{ path('reservation_index') }}" class="btn btn-link">
+            <i class="bi bi-arrow-left"></i> {{ 'action.back_to_list'|trans }}
+        </a>
+    </div>
+{% endblock %}

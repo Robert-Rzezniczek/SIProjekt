@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="validators">
+    <body>
+      <trans-unit id="message.this_email_already_exists">
+        <source>message.this_email_already_exists</source>
+        <target>There is already an account with this email.</target>
+      </trans-unit>
+      <trans-unit id="message.max_characters_is_50">
+        <source>message.max_characters_is_50</source>
+        <target>The maximum length is 50 characters.</target>
+      </trans-unit>
+      <trans-unit id="message.you_should_agree">
+        <source>message.you_should_agree</source>
+        <target>You must agree to the terms.</target>
+      </trans-unit>
+      <trans-unit id="message.enter_password">
+        <source>message.enter_password</source>
+        <target>Please enter a password.</target>
+      </trans-unit>
+      <trans-unit id="message.password_too_short">
+        <source>message.password_too_short</source>
+        <target>Password is too short. It must be at least 6 characters.</target>
+      </trans-unit>
+      <trans-unit id="message.password_not_blank">
+        <source>message.password_not_blank</source>
+        <target>Password cannot be blank.</target>
+      </trans-unit>
+      <trans-unit id="message.password_must_contain_letter_and_number">
+        <source>message.password_must_contain_letter_and_number</source>
+        <target>Password must contain at least one letter and one number.</target>
+      </trans-unit>
+      <trans-unit id="message.email_not_blank">
+        <source>message.email_not_blank</source>
+        <target>Email cannot be blank.</target>
+      </trans-unit>
+      <trans-unit id="message.invalid_email_format">
+        <source>message.invalid_email_format</source>
+        <target>Invalid email format.</target>
+      </trans-unit>
+      <trans-unit id="message.email_too_short">
+        <source>message.email_too_short</source>
+        <target>Email is too short.</target>
+      </trans-unit>
+      <trans-unit id="message.nickname_too_long">
+        <source>message.nickname_too_long</source>
+        <target>Nickname is too long. Maximum 50 characters.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

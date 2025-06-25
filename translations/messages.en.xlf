@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="messages">
+    <body>
+      <trans-unit id="label.id">
+        <source>label.id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="label.created_at">
+        <source>label.created_at</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="label.updated_at">
+        <source>label.updated_at</source>
+        <target>Modification date</target>
+      </trans-unit>
+      <trans-unit id="label.title">
+        <source>label.title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="label.actions">
+        <source>label.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="label.content">
+        <source>label.content</source>
+        <target>Content</target>
+      </trans-unit>
+      <trans-unit id="label.tags">
+        <source>label.tags</source>
+        <target>Tags</target>
+      </trans-unit>
+      <trans-unit id="message.empty_list">
+        <source>message.empty_list</source>
+        <target>List is empty.</target>
+      </trans-unit>
+      <trans-unit id="message.record_not_found">
+        <source>message.record_not_found</source>
+        <target>Record not found.</target>
+      </trans-unit>
+      <trans-unit id="title.category_list">
+        <source>title.category_list</source>
+        <target>Categories list</target>
+      </trans-unit>
+      <trans-unit id="title.record_list">
+        <source>title.record_list</source>
+        <target>Records list</target>
+      </trans-unit>
+      <trans-unit id="title.record_view">
+        <source>title.record_view</source>
+        <target>Record view #%id%</target>
+      </trans-unit>
+      <trans-unit id="action.view">
+        <source>action.view</source>
+        <target>View</target>
+      </trans-unit>
+      <trans-unit id="title.task_details">
+        <source>title.task_details</source>
+        <target>Task details #%id%</target>
+      </trans-unit>
+      <trans-unit id="message.no_tags">
+        <source>message.no_tags</source>
+        <target>No tags</target>
+      </trans-unit>
+      <trans-unit id="label.page_not_found">
+        <source>label.page_not_found</source>
+        <target>Page not found</target>
+      </trans-unit>
+      <trans-unit id="label.error_404">
+        <source>label.error_404</source>
+        <target>404 Error</target>
+      </trans-unit>
+      <trans-unit id="message.page_not_found">
+        <source>message.page_not_found</source>
+        <target>The page you are looking for could not be found.</target>
+      </trans-unit>
+      <trans-unit id="label.back_to_home">
+        <source>label.back_to_home</source>
+        <target>Back to Home</target>
+      </trans-unit>
+      <trans-unit id="message.access_denied">
+        <source>message.access_denied</source>
+        <target>Access denied. You do not have permission to view this page.</target>
+      </trans-unit>
+      <trans-unit id="message.created_successfully">
+        <source>message.created_successfully</source>
+        <target>Successfully created.</target>
+      </trans-unit>
+      <trans-unit id="message.edited_successfully">
+        <source>message.edited_successfully</source>
+        <target>Successfully edited.</target>
+      </trans-unit>
+      <trans-unit id="message.category_contains_tasks">
+        <source>message.category_contains_tasks</source>
+        <target>This category contains tasks and cannot be deleted.</target>
+      </trans-unit>
+      <trans-unit id="message.deleted_successfully">
+        <source>message.deleted_successfully</source>
+        <target>Successfully deleted.</target>
+      </trans-unit>
+      <trans-unit id="message.updated_successfully">
+        <source>message.updated_successfully</source>
+        <target>Successfully updated.</target>
+      </trans-unit>
+      <trans-unit id="message.password_changed_successfully">
+        <source>message.password_changed_successfully</source>
+        <target>Password changed successfully.</target>
+      </trans-unit>
+      <trans-unit id="message.reservation_failed">
+        <source>message.reservation_failed</source>
+        <target>Reservation failed. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="message.item_not_available">
+        <source>message.item_not_available</source>
+        <target>The item is not available for reservation.</target>
+      </trans-unit>
+      <trans-unit id="message.rented_successfully">
+        <source>message.rented_successfully</source>
+        <target>Item rented successfully.</target>
+      </trans-unit>
+      <trans-unit id="message.rent_failed">
+        <source>message.rent_failed</source>
+        <target>Rental failed. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="message.managed_successfully">
+        <source>message.managed_successfully</source>
+        <target>Successfully managed.</target>
+      </trans-unit>
+      <trans-unit id="message.action_not_allowed">
+        <source>message.action_not_allowed</source>
+        <target>This action is not allowed.</target>
+      </trans-unit>
+      <trans-unit id="message.overdue_reservations_warning">
+        <source>message.overdue_reservations_warning</source>
+        <target>You have overdue reservations. Please return them soon.</target>
+      </trans-unit>
+      <trans-unit id="message.return_requested_successfully">
+        <source>message.return_requested_successfully</source>
+        <target>Return request submitted successfully.</target>
+      </trans-unit>
+      <trans-unit id="message.return_failed">
+        <source>message.return_failed</source>
+        <target>Return request failed. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="label.return_managed_successfully">
+        <source>label.return_managed_successfully</source>
+        <target>Return managed successfully</target>
+      </trans-unit>
+      <trans-unit id="label.action_not_allowed">
+        <source>label.action_not_allowed</source>
+        <target>Action not allowed</target>
+      </trans-unit>
+      <trans-unit id="message.cannot_change_own_role">
+        <source>message.cannot_change_own_role</source>
+        <target>You cannot change your own role.</target>
+      </trans-unit>
+      <trans-unit id="message.cannot_block_self">
+        <source>message.cannot_block_self</source>
+        <target>You cannot block yourself.</target>
+      </trans-unit>
+      <trans-unit id="label.items">
+        <source>label.items</source>
+        <target>Items</target>
+      </trans-unit>
+      <trans-unit id="label.top_rated_items">
+        <source>label.top_rated_items</source>
+        <target>Top Rated Items</target>
+      </trans-unit>
+      <trans-unit id="label.item_search">
+        <source>label.item_search</source>
+        <target>Item Search</target>
+      </trans-unit>
+      <trans-unit id="label.my_reservations">
+        <source>label.my_reservations</source>
+        <target>My Reservations</target>
+      </trans-unit>
+      <trans-unit id="label.manage_items">
+        <source>label.manage_items</source>
+        <target>Manage Items</target>
+      </trans-unit>
+      <trans-unit id="label.manage_reservations">
+        <source>label.manage_reservations</source>
+        <target>Manage Reservations</target>
+      </trans-unit>
+      <trans-unit id="label.manage_users">
+        <source>label.manage_users</source>
+        <target>Manage Users</target>
+      </trans-unit>
+      <trans-unit id="label.manage_categories">
+        <source>label.manage_categories</source>
+        <target>Manage Categories</target>
+      </trans-unit>
+      <trans-unit id="label.manage_tags">
+        <source>label.manage_tags</source>
+        <target>Manage Tags</target>
+      </trans-unit>
+      <trans-unit id="message.logged_in_as">
+        <source>message.logged_in_as</source>
+        <target>Logged in as</target>
+      </trans-unit>
+      <trans-unit id="label.my_profile">
+        <source>label.my_profile</source>
+        <target>My Profile</target>
+      </trans-unit>
+      <trans-unit id="label.logout">
+        <source>label.logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="label.login">
+        <source>label.login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="label.register">
+        <source>label.register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="title.category_create">
+        <source>title.category_create</source>
+        <target>Create Category</target>
+      </trans-unit>
+      <trans-unit id="action.save">
+        <source>action.save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="title.category_delete">
+        <source>title.category_delete</source>
+        <target>Delete Category</target>
+      </trans-unit>
+      <trans-unit id="action.delete">
+        <source>action.delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="title.category_edit">
+        <source>title.category_edit</source>
+        <target>Edit Category</target>
+      </trans-unit>
+      <trans-unit id="action.edit">
+        <source>action.edit</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="action.add">
+        <source>action.add</source>
+        <target>Add</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_delete">
+        <source>message.confirm_delete</source>
+        <target>Are you sure you want to delete this item?</target>
+      </trans-unit>
+      <trans-unit id="title.category_details">
+        <source>title.category_details</source>
+        <target>Category Details</target>
+      </trans-unit>
+      <trans-unit id="action.back_to_list">
+        <source>action.back_to_list</source>
+        <target>Back to List</target>
+      </trans-unit>
+      <trans-unit id="message.form_error">
+        <source>message.form_error</source>
+        <target>There was an error with the form. Please check your input.</target>
+      </trans-unit>
+      <trans-unit id="title.item_create">
+        <source>title.item_create</source>
+        <target>Create Item</target>
+      </trans-unit>
+      <trans-unit id="title.item_delete">
+        <source>title.item_delete</source>
+        <target>Delete Item</target>
+      </trans-unit>
+      <trans-unit id="title.item_edit">
+        <source>title.item_edit</source>
+        <target>Edit Item</target>
+      </trans-unit>
+      <trans-unit id="title.item_list">
+        <source>title.item_list</source>
+        <target>Item List</target>
+      </trans-unit>
+      <trans-unit id="label.rating">
+        <source>label.rating</source>
+        <target>Rating</target>
+      </trans-unit>
+      <trans-unit id="label.quantity">
+        <source>label.quantity</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="label.category">
+        <source>label.category</source>
+        <target>Category</target>
+      </trans-unit>
+      <trans-unit id="label.no_rating">
+        <source>label.no_rating</source>
+        <target>No rating</target>
+      </trans-unit>
+      <trans-unit id="action.rent">
+        <source>action.rent</source>
+        <target>Rent</target>
+      </trans-unit>
+      <trans-unit id="action.reserve">
+        <source>action.reserve</source>
+        <target>Reserve</target>
+      </trans-unit>
+      <trans-unit id="title.item_search">
+        <source>title.item_search</source>
+        <target>Item Search</target>
+      </trans-unit>
+      <trans-unit id="action.search">
+        <source>action.search</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="message.no_results">
+        <source>message.no_results</source>
+        <target>No results found.</target>
+      </trans-unit>
+      <trans-unit id="title.top_rated_items">
+        <source>title.top_rated_items</source>
+        <target>Top Rated Items</target>
+      </trans-unit>
+      <trans-unit id="message.no_top_rated_items">
+        <source>message.no_top_rated_items</source>
+        <target>No top rated items available.</target>
+      </trans-unit>
+      <trans-unit id="title.item_details">
+        <source>title.item_details</source>
+        <target>Item Details</target>
+      </trans-unit>
+      <trans-unit id="label.description">
+        <source>label.description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="message.no_image_available">
+        <source>message.no_image_available</source>
+        <target>No image available.</target>
+      </trans-unit>
+      <trans-unit id="title.profile_change_password">
+        <source>title.profile_change_password</source>
+        <target>Change Password</target>
+      </trans-unit>
+      <trans-unit id="action.change_password">
+        <source>action.change_password</source>
+        <target>Change Password</target>
+      </trans-unit>
+      <trans-unit id="title.profile_edit">
+        <source>title.profile_edit</source>
+        <target>Edit Profile</target>
+      </trans-unit>
+      <trans-unit id="label.admin_panel">
+        <source>label.admin_panel</source>
+        <target>Admin Panel</target>
+      </trans-unit>
+      <trans-unit id="label.user_panel">
+        <source>label.user_panel</source>
+        <target>User Panel</target>
+      </trans-unit>
+      <trans-unit id="label.welcome_admin">
+        <source>label.welcome_admin</source>
+        <target>Welcome, Admin!</target>
+      </trans-unit>
+      <trans-unit id="label.welcome_user">
+        <source>label.welcome_user</source>
+        <target>Welcome, User!</target>
+      </trans-unit>
+      <trans-unit id="label.profile_actions">
+        <source>label.profile_actions</source>
+        <target>Profile Actions</target>
+      </trans-unit>
+      <trans-unit id="label.edit_profile">
+        <source>label.edit_profile</source>
+        <target>Edit Profile</target>
+      </trans-unit>
+      <trans-unit id="label.change_password">
+        <source>label.change_password</source>
+        <target>Change Password</target>
+      </trans-unit>
+      <trans-unit id="title.register">
+        <source>title.register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="label.nickname">
+        <source>label.nickname</source>
+        <target>Nickname</target>
+      </trans-unit>
+      <trans-unit id="label.password">
+        <source>label.password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="message.password_required">
+        <source>message.password_required</source>
+        <target>Password is required.</target>
+      </trans-unit>
+      <trans-unit id="label.agree_terms">
+        <source>label.agree_terms</source>
+        <target>Agree to terms</target>
+      </trans-unit>
+      <trans-unit id="action.register">
+        <source>action.register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="title.reservation_list">
+        <source>title.reservation_list</source>
+        <target>Reservation List</target>
+      </trans-unit>
+      <trans-unit id="label.item">
+        <source>label.item</source>
+        <target>Item</target>
+      </trans-unit>
+      <trans-unit id="label.email">
+        <source>label.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="label.status">
+        <source>label.status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="label.loan_date">
+        <source>label.loan_date</source>
+        <target>Loan Date</target>
+      </trans-unit>
+      <trans-unit id="label.expiration_date">
+        <source>label.expiration_date</source>
+        <target>Expiration Date</target>
+      </trans-unit>
+      <trans-unit id="label.manage">
+        <source>label.manage</source>
+        <target>Manage</target>
+      </trans-unit>
+      <trans-unit id="label.manage_return">
+        <source>label.manage_return</source>
+        <target>Manage Return</target>
+      </trans-unit>
+      <trans-unit id="label.reservation_manage">
+        <source>label.reservation_manage</source>
+        <target>Reservation Management</target>
+      </trans-unit>
+      <trans-unit id="label.user">
+        <source>label.user</source>
+        <target>User</target>
+      </trans-unit>
+      <trans-unit id="label.current_status">
+        <source>label.current_status</source>
+        <target>Current Status</target>
+      </trans-unit>
+      <trans-unit id="label.comment">
+        <source>label.comment</source>
+        <target>Comment</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_approve">
+        <source>message.confirm_approve</source>
+        <target>Are you sure you want to approve this reservation?</target>
+      </trans-unit>
+      <trans-unit id="label.approve">
+        <source>label.approve</source>
+        <target>Approve</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_reject">
+        <source>message.confirm_reject</source>
+        <target>Are you sure you want to reject this reservation?</target>
+      </trans-unit>
+      <trans-unit id="label.reject">
+        <source>label.reject</source>
+        <target>Reject</target>
+      </trans-unit>
+      <trans-unit id="message.no_action_needed">
+        <source>message.no_action_needed</source>
+        <target>No action is needed at this time.</target>
+      </trans-unit>
+      <trans-unit id="label.user_rating">
+        <source>label.user_rating</source>
+        <target>User Rating</target>
+      </trans-unit>
+      <trans-unit id="message.confirm_approve_return">
+        <source>message.confirm_approve_return</source>
+        <target>Are you sure you want to approve this return?</target>
+      </trans-unit>
+      <trans-unit id="label.approve_return">
+        <source>label.approve_return</source>
+        <target>Approve Return</target>
+      </trans-unit>
+      <trans-unit id="label.return_request">
+        <source>label.return_request</source>
+        <target>Return Request</target>
+      </trans-unit>
+      <trans-unit id="label.no_reservations">
+        <source>label.no_reservations</source>
+        <target>No reservations found.</target>
+      </trans-unit>
+      <trans-unit id="title.overdue_reservations">
+        <source>title.overdue_reservations</source>
+        <target>Overdue Reservations</target>
+      </trans-unit>
+      <trans-unit id="label.return_date">
+        <source>label.return_date</source>
+        <target>Return Date</target>
+      </trans-unit>
+      <trans-unit id="action.manage_return">
+        <source>action.manage_return</source>
+        <target>Manage Return</target>
+      </trans-unit>
+      <trans-unit id="title.rent_item">
+        <source>title.rent_item</source>
+        <target>Rent Item</target>
+      </trans-unit>
+      <trans-unit id="title.reserve_item">
+        <source>title.reserve_item</source>
+        <target>Reserve Item</target>
+      </trans-unit>
+      <trans-unit id="title.request_return">
+        <source>title.request_return</source>
+        <target>Request Return</target>
+      </trans-unit>
+      <trans-unit id="action.request_return">
+        <source>action.request_return</source>
+        <target>Request Return</target>
+      </trans-unit>
+      <trans-unit id="title.reservation_details">
+        <source>title.reservation_details</source>
+        <target>Reservation Details</target>
+      </trans-unit>
+      <trans-unit id="label.guest">
+        <source>label.guest</source>
+        <target>Guest</target>
+      </trans-unit>
+      <trans-unit id="title.login">
+        <source>title.login</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="action.logout">
+        <source>action.logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="message.email_required">
+        <source>message.email_required</source>
+        <target>Email is required.</target>
+      </trans-unit>
+      <trans-unit id="action.sign_in">
+        <source>action.sign_in</source>
+        <target>Sign In</target>
+      </trans-unit>
+      <trans-unit id="title.tag_create">
+        <source>title.tag_create</source>
+        <target>Create Tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_delete">
+        <source>title.tag_delete</source>
+        <target>Delete Tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_edit">
+        <source>title.tag_edit</source>
+        <target>Edit Tag</target>
+      </trans-unit>
+      <trans-unit id="title.tag_list">
+        <source>title.tag_list</source>
+        <target>Tag List</target>
+      </trans-unit>
+      <trans-unit id="title.tag_details">
+        <source>title.tag_details</source>
+        <target>Tag Details</target>
+      </trans-unit>
+      <trans-unit id="title.change_password">
+        <source>title.change_password</source>
+        <target>Change Password</target>
+      </trans-unit>
+      <trans-unit id="title.user_list">
+        <source>title.user_list</source>
+        <target>User List</target>
+      </trans-unit>
+      <trans-unit id="label.roles">
+        <source>label.roles</source>
+        <target>Roles</target>
+      </trans-unit>
+      <trans-unit id="action.user_roles">
+        <source>action.user_roles</source>
+        <target>Manage Roles</target>
+      </trans-unit>
+      <trans-unit id="user.block_confirm">
+        <source>user.block_confirm</source>
+        <target>Are you sure you want to block this user?</target>
+      </trans-unit>
+      <trans-unit id="user.unblock_confirm">
+        <source>user.unblock_confirm</source>
+        <target>Are you sure you want to unblock this user?</target>
+      </trans-unit>
+      <trans-unit id="user.block">
+        <source>user.block</source>
+        <target>Block</target>
+      </trans-unit>
+      <trans-unit id="user.unblock">
+        <source>user.unblock</source>
+        <target>Unblock</target>
+      </trans-unit>
+      <trans-unit id="title.user_roles">
+        <source>title.user_roles</source>
+        <target>Manage User Roles</target>
+      </trans-unit>
+      <trans-unit id="title.user_details">
+        <source>title.user_details</source>
+        <target>User Details</target>
+      </trans-unit>
+      <trans-unit id="label.new_password">
+        <source>label.new_password</source>
+        <target>New Password</target>
+      </trans-unit>
+      <trans-unit id="label.search_by_title">
+        <source>label.search_by_title</source>
+        <target>Search by Title</target>
+      </trans-unit>
+      <trans-unit id="label.any_rating">
+        <source>label.any_rating</source>
+        <target>Any Rating</target>
+      </trans-unit>
+      <trans-unit id="label.5_stars">
+        <source>label.5_stars</source>
+        <target>5 Stars</target>
+      </trans-unit>
+      <trans-unit id="label.4_stars_and_above">
+        <source>label.4_stars_and_above</source>
+        <target>4 Stars and Above</target>
+      </trans-unit>
+      <trans-unit id="label.3_stars_and_above">
+        <source>label.3_stars_and_above</source>
+        <target>3 Stars and Above</target>
+      </trans-unit>
+      <trans-unit id="label.2_stars_and_above">
+        <source>label.2_stars_and_above</source>
+        <target>2 Stars and Above</target>
+      </trans-unit>
+      <trans-unit id="label.1_star_and_above">
+        <source>label.1_star_and_above</source>
+        <target>1 Star and Above</target>
+      </trans-unit>
+      <trans-unit id="label.any_category">
+        <source>label.any_category</source>
+        <target>Any Category</target>
+      </trans-unit>
+      <trans-unit id="label.any_tag">
+        <source>label.any_tag</source>
+        <target>Any Tag</target>
+      </trans-unit>
+      <trans-unit id="label.none">
+        <source>label.none</source>
+        <target>None</target>
+      </trans-unit>
+      <trans-unit id="label.image">
+        <source>label.image</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="label.remove_image">
+        <source>label.remove_image</source>
+        <target>Remove Image</target>
+      </trans-unit>
+      <trans-unit id="label.return_comment">
+        <source>label.return_comment</source>
+        <target>Return Comment</target>
+      </trans-unit>
+      <trans-unit id="label.item_rating">
+        <source>label.item_rating</source>
+        <target>Item Rating</target>
+      </trans-unit>
+      <trans-unit id="label.is_admin">
+        <source>label.is_admin</source>
+        <target>Admin Privileges</target>
+      </trans-unit>
+      <trans-unit id="status.approved">
+        <source>status.approved</source>
+        <target>Rented</target>
+      </trans-unit>
+      <trans-unit id="status.returned">
+        <source>status.returned</source>
+        <target>Returned</target>
+      </trans-unit>
+      <trans-unit id="status.return_pending">
+        <source>status.return_pending</source>
+        <target>Pending return</target>
+      </trans-unit>
+      <trans-unit id="status.pending">
+        <source>status.pending</source>
+        <target>Pending</target>
+      </trans-unit>
+      <trans-unit id="status.rejected">
+        <source>status.rejected</source>
+        <target>Rejected</target>
+      </trans-unit>
+      <trans-unit id="label.dont_wanna_rate">
+        <source>label.dont_wanna_rate</source>
+        <target>Don't want to rate</target>
+      </trans-unit>
+      <trans-unit id="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="Nickname">
+        <source>Nickname</source>
+        <target>Nickname</target>
+      </trans-unit>
+      <trans-unit id="Password">
+        <source>Password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="Agree terms">
+        <source>Agree terms</source>
+        <target>Agree to terms</target>
+      </trans-unit>
+      <trans-unit id="message.item_contains_reservations">
+        <source>message.item_contains_reservations</source>
+        <target>Wypożyczenia zawierają ten przedmiot. Nie można usunąć.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
