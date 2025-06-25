@@ -124,7 +124,7 @@
       </trans-unit>
       <trans-unit id="message.managed_successfully">
         <source>message.managed_successfully</source>
-        <target>Pomyślnie zarządzano.</target>
+        <target>Pomyślnie zarządzono.</target>
       </trans-unit>
       <trans-unit id="message.action_not_allowed">
         <source>message.action_not_allowed</source>
@@ -136,15 +136,15 @@
       </trans-unit>
       <trans-unit id="message.return_requested_successfully">
         <source>message.return_requested_successfully</source>
-        <target>Żądanie zwrotu zostało pomyślnie złożone.</target>
+        <target>Zgłoszenie zwrotu zostało pomyślnie złożone.</target>
       </trans-unit>
       <trans-unit id="message.return_failed">
         <source>message.return_failed</source>
-        <target>Żądanie zwrotu nie powiodło się. Proszę spróbować ponownie.</target>
+        <target>Zgłoszenie zwrotu nie powiodło się. Proszę spróbować ponownie.</target>
       </trans-unit>
       <trans-unit id="label.return_managed_successfully">
         <source>label.return_managed_successfully</source>
-        <target>Zwrot zarządzany pomyślnie</target>
+        <target>Zwrot zatwierdzony pomyślnie</target>
       </trans-unit>
       <trans-unit id="label.action_not_allowed">
         <source>label.action_not_allowed</source>
@@ -476,7 +476,7 @@
       </trans-unit>
       <trans-unit id="label.return_request">
         <source>label.return_request</source>
-        <target>Żądanie zwrotu</target>
+        <target>Zgłoś zwrot</target>
       </trans-unit>
       <trans-unit id="label.no_reservations">
         <source>label.no_reservations</source>
